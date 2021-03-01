@@ -1,3 +1,4 @@
+//string관련 함수
 void copy_string(char *str1, char *str2)
 {
   while(*str2 != '\0'{
@@ -6,4 +7,29 @@ void copy_string(char *str1, char *str2)
     str2++;
   }
   *str1='\0';
+}
+
+//리스트 관련 함수
+void create_node (struct node *list, int value)
+{
+    struct node *newnode = (struct node *)malloc(sizeof(struct node));
+	  newnode->value = value;
+    newnode->next = NULL;
+    list->next = newnode;
+};
+void init_node(struct node *list, int value)
+{
+    list->value = value;
+    list->next = NULL;
+};
+void delete_node(struct node *list)
+{
+    struct node *temp;
+    temp = list;
+    while(temp != NULL)
+    {
+            list = list->next;
+            free(temp);
+            temp = list;
+    }
 }
