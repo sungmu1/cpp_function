@@ -1,5 +1,5 @@
 //string관련 함수
-void copy_string(char *str1, char *str2)
+void strcpy_mine(char *str1, char *str2)
 {
   while(*str2 != '\0'{
     *str1 = *str2;
@@ -7,6 +7,14 @@ void copy_string(char *str1, char *str2)
     str2++;
   }
   *str1='\0';
+}
+	
+int strcmp_mine(char *str1, char *str2){
+	while(*str1 != '\0' && (*str1 == *str2)){
+		str1++;
+		str2++;
+	}
+	return *str1-*str2;
 }
 
 //리스트 관련 함수
