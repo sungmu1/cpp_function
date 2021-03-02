@@ -41,3 +41,9 @@ void delete_node(struct node *list)
             temp = list;
     }
 }
+
+//문자관련
+int char_to_int_mine(char a)
+{
+    return a-48;
+}
