@@ -1,7 +1,7 @@
 //string관련 함수
 void strcpy_mine(char *str1, char *str2)
 {
-  while(*str2 != '\0'{
+  while(*str2 != '\0'){
     *str1 = *str2;
     str1++;
     str2++;
